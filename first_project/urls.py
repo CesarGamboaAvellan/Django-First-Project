@@ -24,5 +24,7 @@ from first_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^new/', include('first_app.urls')),
+    url(r'^test/', views.test_function, name = 'test_function'),
+    # url(r'^test/', include('first_app.urls')),
     url(r'^$', views.index, name='index')
 ]
